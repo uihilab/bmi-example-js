@@ -18,7 +18,9 @@ class BMI {
    */
 
   initialize(config_file) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -33,7 +35,9 @@ class BMI {
    */
 
   update() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -44,7 +48,9 @@ class BMI {
    */
 
   update_until(time) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -57,7 +63,9 @@ class BMI {
    */
 
   finalize() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -67,7 +75,11 @@ class BMI {
    * @return {String} - The name of the component
    */
 
-  get_component_name() {}
+  get_component_name() {
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
+  }
 
   /**
    * Count of a model's input variables.
@@ -77,7 +89,9 @@ class BMI {
    */
 
   get_input_item_count() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -88,7 +102,9 @@ class BMI {
    */
 
   get_output_item_count() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -99,7 +115,9 @@ class BMI {
    */
 
   get_input_var_names() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -110,7 +128,9 @@ class BMI {
    */
 
   get_output_var_names() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -122,7 +142,9 @@ class BMI {
    */
 
   get_var_grid(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -134,7 +156,9 @@ class BMI {
    */
 
   get_var_type(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -153,7 +177,9 @@ class BMI {
    */
 
   get_var_units(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -165,7 +191,9 @@ class BMI {
    */
 
   get_var_itemsize(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -177,7 +205,9 @@ class BMI {
    */
 
   get_var_nbytes(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -199,7 +229,9 @@ class BMI {
    */
 
   get_var_location(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -211,7 +243,9 @@ class BMI {
    */
 
   get_current_time() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -222,7 +256,9 @@ class BMI {
    */
 
   get_start_time() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -233,7 +269,9 @@ class BMI {
    */
 
   get_end_time() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -244,7 +282,9 @@ class BMI {
    */
 
   get_time_units() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -255,7 +295,9 @@ class BMI {
    */
 
   get_time_step() {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -271,7 +313,9 @@ class BMI {
    */
 
   get_value(name, dest) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -286,7 +330,9 @@ class BMI {
    */
 
   get_value_ptr(name) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -300,7 +346,9 @@ class BMI {
    */
 
   get_value_at_indices(name, dest, inds) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -316,7 +364,9 @@ class BMI {
    */
 
   set_value(name, src) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -329,7 +379,9 @@ class BMI {
    */
 
   set_value_at_indices(name, inds, src) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -341,7 +393,9 @@ class BMI {
    */
 
   get_grid_type(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -353,7 +407,9 @@ class BMI {
    */
 
   get_grid_rank(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -365,7 +421,9 @@ class BMI {
    */
 
   get_grid_size(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -377,7 +435,9 @@ class BMI {
    */
 
   get_grid_shape(grid, shape) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -389,7 +449,9 @@ class BMI {
    */
 
   get_grid_spacing(grid, spacing) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -401,7 +463,9 @@ class BMI {
    */
 
   get_grid_origin(grid, origin) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -413,7 +477,9 @@ class BMI {
    */
 
   get_grid_x(grid, x) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -425,7 +491,9 @@ class BMI {
    */
 
   get_grid_y(grid, y) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -437,7 +505,9 @@ class BMI {
    */
 
   get_grid_z(grid, z) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -449,7 +519,9 @@ class BMI {
    */
 
   get_grid_node_count(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -461,7 +533,9 @@ class BMI {
    */
 
   get_grid_edge_count(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -473,7 +547,9 @@ class BMI {
    */
 
   get_grid_face_count(grid) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -485,7 +561,9 @@ class BMI {
    */
 
   get_grid_edge_nodes(grid, edge_nodes) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -497,7 +575,9 @@ class BMI {
    */
 
   get_grid_face_edges(grid, face_edges) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -509,7 +589,9 @@ class BMI {
    */
 
   get_grid_face_nodes(grid, face_nodes) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 
   /**
@@ -521,7 +603,9 @@ class BMI {
    */
 
   get_grid_nodes_per_face(grid, nodes_per_face) {
-    throw new Error("Abstract Method has no implementation");
+    throw new Error(
+      "BMI.js does not have an implementation of this method. Implement where class is inherited"
+    );
   }
 }
 
