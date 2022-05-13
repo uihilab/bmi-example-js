@@ -8,5 +8,20 @@ This repository is organized with the following directories:
 
 ### heat
 Holds the model and the BMI for the model
-### tests
+### test-cases
 Tests that cover the BMI of the model
+
+## Build/Install
+This example can be built and installed on Linux, macOS, and Windows.
+
+### Prerequisites(for testing purposes to work with [Jest](https://jestjs.io/))
+- Node
+
+To build/install this example, using the current JavaScript BMI version, run
+```bash
+  npm install
+```
+To run the test cases
+```bash
+  npm test
+```
