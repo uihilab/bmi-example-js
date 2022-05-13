@@ -72,7 +72,7 @@ class BMI {
    * Gets name of the component.
    * @method get_component_name
    * @memberof BMI
-   * @return {String} - The name of the component
+   * @returns {String} - The name of the component
    */
 
   get_component_name() {
@@ -85,7 +85,7 @@ class BMI {
    * Count of a model's input variables.
    * @method get_input_item_count
    * @memberof BMI
-   * @return {Number} - The number of input variables.
+   * @returns {Number} - The number of input variables.
    */
 
   get_input_item_count() {
@@ -98,7 +98,7 @@ class BMI {
    * Count of a model's output variables.
    * @method get_output_item_count
    * @memberof BMI
-   * @return {Number} - The number of output variables.
+   * @returns {Number} - The number of output variables.
    */
 
   get_output_item_count() {
@@ -108,10 +108,10 @@ class BMI {
   }
 
   /**
-   * Gets an array of names for the variables the model can use from other models implementing a BMI.
+   * Gets an Array of names for the variables the model can use from other models implementing a BMI.
    * @method get_input_var_names
    * @memberof BMI
-   * @return {Array} -  The names are returned from the function in an Array, a standard container in the language.
+   * @returns {Object[]} -  The names are returned from the function in an Array, a standard container in the language.
    */
 
   get_input_var_names() {
@@ -121,10 +121,10 @@ class BMI {
   }
 
   /**
-   * Gets an array of names for the variables the model can provide to other models implementing a BMI.
+   * Gets an Array of names for the variables the model can provide to other models implementing a BMI.
    * @method get_output_var_names
    * @memberof BMI
-   * @return {Array} -  The names are returned from the function in an Array, a standard container in the language.
+   * @returns {Object[]} -  The names are returned from the function in an Array, a standard container in the language.
    */
 
   get_output_var_names() {
@@ -138,7 +138,7 @@ class BMI {
    * @method get_var_grid
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {Number} - The grid identifier.
+   * @returns {Number} - The grid identifier.
    */
 
   get_var_grid(name) {
@@ -152,7 +152,7 @@ class BMI {
    * @method get_var_type
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {String} - The variable type; e.g., "str", "int", "float".
+   * @returns {String} - The variable type; e.g., "str", "int", "float".
    */
 
   get_var_type(name) {
@@ -173,7 +173,7 @@ class BMI {
    * @method get_var_units
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {String} - The variable units.
+   * @returns {String} - The variable units.
    */
 
   get_var_units(name) {
@@ -187,7 +187,7 @@ class BMI {
    * @method get_var_itemsize
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {Number} - Item size in bytes.
+   * @returns {Number} - Item size in bytes.
    */
 
   get_var_itemsize(name) {
@@ -201,7 +201,7 @@ class BMI {
    * @method get_var_nbytes
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {Number} - the total amount of memory used by the variable is returned from the function.
+   * @returns {Number} - the total amount of memory used by the variable is returned from the function.
    */
 
   get_var_nbytes(name) {
@@ -225,7 +225,7 @@ class BMI {
    * @method get_var_location
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {String} - The grid location on which the variable is defined. Must be one of "node", "edge", or "face".
+   * @returns {String} - The grid location on which the variable is defined. Must be one of "node", "edge", or "face".
    */
 
   get_var_location(name) {
@@ -239,7 +239,7 @@ class BMI {
    * @method get_current_time
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {Number} - The current model time.
+   * @returns {Number} - The current model time.
    */
 
   get_current_time() {
@@ -252,7 +252,7 @@ class BMI {
    * Start time of the model. Model times should be of type float
    * @method get_start_time
    * @memberof BMI
-   * @return {Number} -The model start time.
+   * @returns {Number} -The model start time.
    */
 
   get_start_time() {
@@ -265,7 +265,7 @@ class BMI {
    * End time of the model
    * @method get_end_time
    * @memberof BMI
-   * @return {Number} -The maximum model time.
+   * @returns {Number} -The maximum model time.
    */
 
   get_end_time() {
@@ -278,7 +278,7 @@ class BMI {
    * Time units of the model
    * @method get_time_units
    * @memberof BMI
-   * @return {String} -The model time unit; e.g., 'days' or 's'.
+   * @returns {String} -The model time unit; e.g., 'days' or 's'.
    */
 
   get_time_units() {
@@ -291,7 +291,7 @@ class BMI {
    * Current time step of the model. The model time step should be of type Number
    * @method get_time_step
    * @memberof BMI
-   * @return {Number} -The time step used in model.
+   * @returns {Number} -The time step used in model.
    */
 
   get_time_step() {
@@ -308,8 +308,8 @@ class BMI {
    * @method get_value
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @param {Array} dest - An array into which to place the values
-   * @return {Array} -The same array that was passed as an input.
+   * @param {Object[]} dest - An Array into which to place the values
+   * @returns {Object[]} -The same Array that was passed as an input.
    */
 
   get_value(name, dest) {
@@ -326,7 +326,7 @@ class BMI {
    * @method get_value_ptr
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @return {Array} -A reference to a model variable.
+   * @returns {Object[]} -A reference to a model variable.
    */
 
   get_value_ptr(name) {
@@ -340,9 +340,9 @@ class BMI {
    * @method get_value_at_indices
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @param {Array} dest - An array into which to place the values
-   * @param {Array} inds - The indices into the variable array
-   * @return {Array} -Value of the model variable at the given location.
+   * @param {Object[]} dest - An Array into which to place the values
+   * @param {Object[]} inds - The indices into the variable Array
+   * @returns {Object[]} -Value of the model variable at the given location.
    */
 
   get_value_at_indices(name, dest, inds) {
@@ -360,7 +360,7 @@ class BMI {
    * @method set_value
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @param {Array} src - The new value for the specified variable
+   * @param {Object[]} src - The new value for the specified variable
    */
 
   set_value(name, src) {
@@ -374,8 +374,8 @@ class BMI {
    * @method set_value_at_indices
    * @memberof BMI
    * @param {String} name - An input or output variable name, a CSDMS Standard Name
-   * @param {Array} inds - The indices into the variable array
-   * @param {Array} src - The new value for the specified variable
+   * @param {Object[]} inds - The indices into the variable Array
+   * @param {Object[]} src - The new value for the specified variable
    */
 
   set_value_at_indices(name, inds, src) {
@@ -389,7 +389,7 @@ class BMI {
    * @method get_grid_type
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {String} Type of grid as a string.
+   * @returns {String} Type of grid as a string.
    */
 
   get_grid_type(grid) {
@@ -403,7 +403,7 @@ class BMI {
    * @method get_grid_rank
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {Number} Rank of the grid.
+   * @returns {Number} Rank of the grid.
    */
 
   get_grid_rank(grid) {
@@ -417,7 +417,7 @@ class BMI {
    * @method get_grid_size
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {Number} Size of the grid.
+   * @returns {Number} Size of the grid.
    */
 
   get_grid_size(grid) {
@@ -431,7 +431,7 @@ class BMI {
    * @method get_grid_shape
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(ndim,)*} shape - An array into which to place the shape of the grid.
+   * @param {Object[]} shape - A Number Array of n-dim shape into which to place the shape of the grid.
    */
 
   get_grid_shape(grid, shape) {
@@ -445,7 +445,7 @@ class BMI {
    * @method get_grid_spacing
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(ndim,)*} spacing - An array to hold the spacing between grid rows and columns.
+   * @param {Object[]} spacing - A Number Array of n-dim shape to hold the spacing between grid rows and columns.
    */
 
   get_grid_spacing(grid, spacing) {
@@ -459,7 +459,7 @@ class BMI {
    * @method get_grid_origin
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(ndim,)*} origin - An array to hold the coordinates of the lower-left corner of the grid.
+   * @param {Object[]} origin - A number Array of n-dim shape to hold the coordinates of the lower-left corner of the grid.
    */
 
   get_grid_origin(grid, origin) {
@@ -473,7 +473,7 @@ class BMI {
    * @method get_grid_x
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(nrows,)*} x - An array to hold the x-coordinates of the grid node columns
+   * @param {Object[]} x - A Number Array of n-rows shape to hold the x-coordinates of the grid node columns
    */
 
   get_grid_x(grid, x) {
@@ -487,7 +487,7 @@ class BMI {
    * @method get_grid_y
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(ncols,)*} y - An array to hold the y-coordinates of the grid node rows
+   * @param {Object[]} y - A Number Array of n-cols shape to hold the y-coordinates of the grid node rows
    */
 
   get_grid_y(grid, y) {
@@ -501,7 +501,7 @@ class BMI {
    * @method get_grid_z
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(nlayers,)*} z - An array to hold the z-coordinates of the grid nodes layers.
+   * @param {Object[]} z - A Number Array of n-layers shape to hold the z-coordinates of the grid nodes layers.
    */
 
   get_grid_z(grid, z) {
@@ -515,7 +515,7 @@ class BMI {
    * @method get_grid_node_count
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {Number} The total number of grid nodes
+   * @returns {Number} The total number of grid nodes
    */
 
   get_grid_node_count(grid) {
@@ -529,7 +529,7 @@ class BMI {
    * @method get_grid_edge_count
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {Number} The total number of grid edges
+   * @returns {Number} The total number of grid edges
    */
 
   get_grid_edge_count(grid) {
@@ -543,7 +543,7 @@ class BMI {
    * @method get_grid_face_count
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @return {Number} The total number of grid faces.
+   * @returns {Number} The total number of grid faces.
    */
 
   get_grid_face_count(grid) {
@@ -557,7 +557,7 @@ class BMI {
    * @method get_grid_edge_nodes
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(2 x nnodes,)*} edge_nodes - An array to place the edge-node connectivity. For each edge, connectivity is given as node at edge tail, followed by node at edge head.
+   * @param {Object[]} edge_nodes - A Number Array of (2 x n-nodes) shape to place the edge-node connectivity. For each edge, connectivity is given as node at edge tail, followed by node at edge head.
    */
 
   get_grid_edge_nodes(grid, edge_nodes) {
@@ -571,7 +571,7 @@ class BMI {
    * @method get_grid_face_edges
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number} face_edges - An array to place the face-edge connectivity.
+   * @param {Object[]} face_edges - A Number Array to place the face-edge connectivity.
    */
 
   get_grid_face_edges(grid, face_edges) {
@@ -585,7 +585,7 @@ class BMI {
    * @method get_grid_face_nodes
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number} face_nodes - An array to place the face-node connectivity. For each face, the nodes (listed in a counter-clockwise direction) that form the boundary of the face.
+   * @param {Object[]} face_nodes - A number Array to place the face-node connectivity. For each face, the nodes (listed in a counter-clockwise direction) that form the boundary of the face.
    */
 
   get_grid_face_nodes(grid, face_nodes) {
@@ -599,7 +599,7 @@ class BMI {
    * @method get_grid_nodes_per_face
    * @memberof BMI
    * @param {Number} grid - A grid identifier
-   * @param {Array of Number, shape *(nfaces,)*} nodes_per_face - An array to place the number of nodes per face.
+   * @param {Object[]} nodes_per_face - A number Array of (n-faces)shape to place the number of nodes per face.
    */
 
   get_grid_nodes_per_face(grid, nodes_per_face) {
