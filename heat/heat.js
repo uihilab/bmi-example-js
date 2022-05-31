@@ -1,4 +1,4 @@
-const Solve2D = require("../heat/solve2D.js");
+const Solve2D = require("./solve2D.js");
 
 /**
  * @class Heat
@@ -32,7 +32,7 @@ class Heat {
       xStart = 0.0;
       yStart = 0.0;
       alpha = 1.0;
-    } else if (typeof nRows == "string" && typeof nCols === "undefined") {
+    } else if (typeof nRows === "string" && typeof nCols === "undefined") {
       const file_params = require(nRows);
       nRows = file_params.nRows;
       nCols = file_params.nCols;

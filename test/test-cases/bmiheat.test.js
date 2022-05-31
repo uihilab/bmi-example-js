@@ -1,4 +1,4 @@
-const BmiHeat = require("../heat/bmiheat.js");
+const BmiHeat = require("../../heat/bmiheat.js");
 
 // check all the test cases before pushing
 // check all getters and setters in bmiheat
@@ -170,7 +170,7 @@ describe("test_initialize_string", () => {
   var component = new BmiHeat();
 
   test("assert equal", () => {
-    expect(component.initialize("../data/heat.json")).not.toBeNull();
+    expect(component.initialize("../test/data/heat.json")).not.toBeNull();
   });
   test("test that they are almost equal", () => {
     expect(component.get_current_time()).toBeCloseTo(0.0, delta);

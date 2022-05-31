@@ -1,4 +1,4 @@
-const BMI = require("../bmi/bmi.js");
+const BMI = require("../bmijs/bmi.js");
 const Heat = require("./heat.js");
 
 /**

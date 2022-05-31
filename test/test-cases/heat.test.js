@@ -1,4 +1,4 @@
-const Heat = require("../heat/heat.js");
+const Heat = require("../../heat/heat.js");
 
 describe("test_initialize_heat_with_values", () => {
   nRows = 8;
@@ -25,7 +25,7 @@ describe("test_initialize_heat_without_values", () => {
 });
 
 describe("test_initialize_heat_string", () => {
-  var heat = new Heat("../data/heat.json");
+  var heat = new Heat("../test/data/heat.json");
 
   test("Should not be null", () => {
     expect(heat).not.toBeNull();
