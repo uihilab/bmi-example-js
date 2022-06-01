@@ -1,5 +1,5 @@
-# JEST Test-cases
-The following files are the test cases for bmiheat.js and heat.js:
+# Test-cases
+The following files are the test cases for bmiheat.js and heat.js written using JEST:
   - bmiheat.test.js
   - heat.test.js
 
