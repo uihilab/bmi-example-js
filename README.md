@@ -1,3 +1,5 @@
+[![Basic Model Interface](https://img.shields.io/badge/CSDMS-Basic%20Model%20Interface-green.svg)](https://bmi.readthedocs.io/)
+
 # bmi-example-js
 An example of implementing [JavaScript Bindings](https://github.com/uihilab/BMI-JS) for the CSDMS [Basic Model Interface](https://bmi-spec.readthedocs.io/en/latest/) (BMI).
 
