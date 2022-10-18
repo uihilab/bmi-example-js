@@ -2,8 +2,11 @@ const BMI = require("../bmijs/bmi.js");
 const Heat = require("./heat.js");
 
 /**
- * @class BmiHeat
+ * @class 
+ * @name BmiHeat
+ * @augments BMI
  * Contains BMI methods that wrap the Heat class.
+ * Creates a new BmiHeat model that is ready for initialization.
  */
 class BmiHeat extends BMI {
   MODEL_NAME = "Heat";
@@ -15,11 +18,6 @@ class BmiHeat extends BMI {
   #grids;
   #gridType;
 
-  /**
-   * @constructor
-   * @memberof BmiHeat
-   * Creates a new BmiHeat model that is ready for initialization.
-   */
   constructor() {
     super();
     this.#model = null;
@@ -46,6 +44,7 @@ class BmiHeat extends BMI {
   /**
    * @private
    * @method #initializeHelper
+   * @memberof BmiHeat
    * Initializes BmiHeat properties using properties from the enclosed Heat
    * instance.
    */
@@ -57,14 +56,18 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   * Updates the current model using the advance in time method.
+   * @method update
+   * @memberof BmiHeat
    */
   update() {
     this.#model.advance_in_time();
   }
 
   /**
-   * @override
+   * Updates the model using the define time step previous to finilizing the model.
+   * @method update_until
+   * @memberof BmiHeat
    */
   update_until(then) {
     let nSteps = (then - this.get_current_time()) / this.get_time_step();
@@ -75,9 +78,10 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @private
-   * @method #updateFrac
    * A helper for updating a model to a fractional time step.
+   * @private
+   * @method updateFrac
+   * @memberof BmiHeat
    * @param timeFrac
    */
   #updateFrac(timeFrac) {
@@ -88,7 +92,9 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   * Finilizes a model.
+   * @method finalize
+   * @memberof BmiHeat
    */
   finalize() {
     this.#model = null;
@@ -99,35 +105,44 @@ class BmiHeat extends BMI {
    */
 
   /**
-   * @override
+   * Returns model name
+   * @method get_component_name
+   * @memberof BmiHeat
    */
   get_component_name() {
     return this.MODEL_NAME;
   }
 
   /**
-   * @override
+   * Returns the count of all input variable names.
+   * @method get_input_item_count
+   * @memberof BmiHeat
+   *  
    */
   get_input_item_count() {
     return this.INPUT_VAR_NAMES.length;
   }
 
   /**
-   * @override
+   * Returns the count of all output variable names.
+   * @method get_output_item_count
+   * @memberof BmiHeat
+   *  
    */
   get_output_item_count() {
     return this.OUTPUT_VAR_NAMES.length;
   }
 
   /**
-   * @override
+   * 
+   *  
    */
   get_input_var_names() {
     return this.INPUT_VAR_NAMES;
   }
 
   /**
-   * @override
+   *  
    */
   get_output_var_names() {
     return this.OUTPUT_VAR_NAMES;
@@ -138,7 +153,7 @@ class BmiHeat extends BMI {
    */
 
   /**
-   * @override
+   *  
    */
   get_var_grid(varName) {
     let arr = Object.values(this.#grids);
@@ -151,7 +166,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_var_type(varName) {
     if (varName == this.get_output_var_names()[0]) {
@@ -163,14 +178,14 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_var_units(varName) {
     return this.#varUnits[varName];
   }
 
   /**
-   * @override
+   *  
    */
   get_var_item_size(varName) {
     let itemSize = 0;
@@ -181,7 +196,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_var_nbytes(varName) {
     if (varName == this.get_output_var_names()[0]) {
@@ -195,7 +210,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_var_location(varName) {
     return "node";
@@ -206,35 +221,35 @@ class BmiHeat extends BMI {
    */
 
   /**
-   * @override
+   *  
    */
   get_start_time() {
     return 0;
   }
 
   /**
-   * @override
+   *  
    */
   get_current_time() {
     return this.#model.get_time();
   }
 
   /**
-   * @override
+   *  
    */
   get_end_time() {
     return Number.MAX_VALUE;
   }
 
   /**
-   * @override
+   *  
    */
   get_time_units() {
     return null;
   }
 
   /**
-   * @override
+   *  
    */
   get_time_step() {
     return this.#model.get_time_step();
@@ -245,7 +260,7 @@ class BmiHeat extends BMI {
    */
 
   /**
-   * @override
+   *  
    */
   get_value(varName, dest) {
     let nRows = this.#model.get_shape()[0];
@@ -296,7 +311,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   set_value(varName, src) {
     let nRows = this.#model.get_shape()[0];
@@ -320,14 +335,14 @@ class BmiHeat extends BMI {
    */
 
   /**
-   * @override
+   *  
    */
   get_grid_rank(gridId) {
     return this.#model.get_shape().length;
   }
 
   /**
-   * @override
+   *  
    */
   get_grid_size(gridId) {
     let product = 1;
@@ -338,14 +353,14 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_grid_type(gridId) {
     return this.#gridType[gridId];
   }
 
   /**
-   * @override
+   *  
    */
   get_grid_shape(gridId, gridShape) {
     for (let i = 0; i < this.#model.get_shape().length; i++) {
@@ -355,7 +370,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_grid_spacing(gridId, gridSpacing) {
     for (let i = 0; i < this.#model.get_spacing().length; i++) {
@@ -365,7 +380,7 @@ class BmiHeat extends BMI {
   }
 
   /**
-   * @override
+   *  
    */
   get_grid_origin(gridId, gridOrigin) {
     for (let i = 0; i < this.#model.get_origin().length; i++) {

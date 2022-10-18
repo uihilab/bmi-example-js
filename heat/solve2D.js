@@ -1,7 +1,11 @@
+/**
+ * Solves the 2D heat equation on a uniform grid.
+ * @class
+ * @name Solve2D
+ */
 class Solve2D {
   /**
-   * Solve the 2D heat equation on a uniform grid.
-   *
+   * Main solver
    * @param temperature a 2D array of temperatures
    * @param shape the dimensions of the grid, in (rows, cols)
    * @param spacing the distance between rows and columns, respectively

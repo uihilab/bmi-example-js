@@ -1,7 +1,16 @@
 const Solve2D = require("./solve2D.js");
 
 /**
- * @class Heat
+ * @class 
+ * @name Heat
+ * Create a new Heat model.
+   * @param {Number} nRows the number of rows in the solution grid
+   * @param {Number} nCols the number of columns in the solution grid
+   * @param {Number} dx distance between columns in grid
+   * @param {Number} dy distance between rows in grid
+   * @param {Number} xStart coordinates of lower left corner of grid
+   * @param {Number} yStart coordinates of lower left corner of grid
+   * @param {Number} alpha parameter in heat equation
  */
 
 class Heat {
@@ -14,14 +23,6 @@ class Heat {
   #temperature;
 
   /**
-   * Create a new Heat model.
-   * @param nRows the number of rows in the solution grid
-   * @param nCols the number of columns in the solution grid
-   * @param dx distance between columns in grid
-   * @param dy distance between rows in grid
-   * @param xStart coordinates of lower left corner of grid
-   * @param yStart coordinates of lower left corner of grid
-   * @param alpha parameter in heat equation
    */
   constructor(nRows, nCols, dx, dy, xStart, yStart, alpha) {
     if (typeof nRows === "undefined") {
@@ -59,10 +60,10 @@ class Heat {
   }
 
   /**
-   *
+   *Creates a 2D array of size [row][column]
    * @param {Number} row
    * @param {Number} column
-   * @returns 2D Array of size [Row][Column]
+   * @returns {Object[]} 2D Array of size [Row][Column]
    */
   create2DArray(row, column) {
     var arr = new Array(row).fill(0.0);
